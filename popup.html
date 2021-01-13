@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #06D85F;
+        margin: 80px 0;
+    }
+    .box{              /*div태그(block요소)를 중앙정렬하기 위해 width, margin 설정*/
+        width: 40%;
+        margin: 0 auto;
+        border: 2px solid #fff;
+        padding: 35px;
+        background: lightgray;
+        border-radius: 20px/50px;
+        background-clip: padding-box;     /*paidding까지만 background 색상 적용*/
+        text-align: center;  /*inline요소인 a.button태그의 중앙정렬을 위해 부모인 .box(block요소)에 설정*/
+    }
+    .button{
+        font-size: 1em;
+        padding: 10px;
+        color: #fff;
+        border: 2px solid #06D85F;
+        border-radius: 20px/50px;
+        text-decoration: none;   /* a태그의 밑줄을 없앰*/
+        cursor : pointer;     /* 마우스 커서 모양을 바꿈*/
+        transition: all 0.3s ease-out; /*ease-out(느렸다가 점점빨라짐)을 모든 속성에 적용하기까지 0.3초*/
+    }
+    .button:hover{
+        background : #06D85F;
+    }
+    .overlay{
+        position: fixed;      /* 스크린 크기에 상관없이 크기 고정을 위함*/
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms; /*투명,불투명하게 하는 것(.overlay:target시 동작하기때문)이 500ms걸림*/
+        opacity: 0;       /*x(&times)를 눌러 overlay를 나왔을 때 500ms의 속도로 빠르게 안 보이게 하기위해*/
+        visibility:hidden;        /*(배경색이)화면에 보이지 않지만 영역은 그대로 차지*/
+    }
+    .overlay:target{
+        visibility: visible;    /* .overlay로 넘어왔을 때 500ms만에 페이지를 화면에 보이게 함*/
+        opacity: 1;       /* 화면이 .overlay로 전환되면 500ms의 속도로 불투명하게(지정한background색)보임*/
+    }
+    .popup{
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;     /* 자식인 .popup.close 의 position을 absolute로 잡기 위해 설정*/
+        transition: all 5s ease-in-out;  /* .popup의 모든 설정값이 5초만에 천천히 시작되어 천천히 끝남*/ 
+    }
+    .popup h2{
+        margin-top: 0;
+        color: #333;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .popup .close{
+        position: absolute;  /*부모(.popup)가 static이 아닌 relative -> 부모(.popup)기준으로 위치 설정*/
+        top: 20px;
+        right: 30px;
+        transition: all 200ms; /* 모든 속성이 200ms만에 전환*/
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;    /* a태그의 밑줄을 없앰*/
+        color: #333;
+    }
+    .popup .close:hover {
+        color: #06D85F;
+    }
+    .popup .content{
+        max-height: 30%;     /*최대 높이를 30%로 지정*/
+        overflow: auto;      /* 글이 길어지면(넘치면) 자동으로 스크롤 생성*/
+    }
+
+</style>
+<body>
+    <h1>Popup/Modal Windows without JavaScript</h1>
+    <div class="box">
+        <a href="#popup1" class="button">Let me Pop up</a>     
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Here i am</h2>
+            <a href="#" class="close">&times;</a>
+            <div class="content">
+                Thank to pop me out of that button, but now i'm done so you can close this window.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
