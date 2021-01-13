@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <style>
+        input{display :none}
+        input:nth-of-type(1) ~ div:nth-of-type(1) {
+            display:none
+        }
+        input:nth-of-type(2) ~ div:nth-of-type(2) {
+            display:none
+        }
+
+        input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+            display:block
+        }
+        input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+            display:block
+        }
+        li {list-style:none}
+        .container {
+            width:960px;
+            margin:0 auto;
+        }
+
+        .content {
+            overflow :hidden;
+        }
+
+        .section {
+            width:700px; float: left;
+        }
+
+        .aside{
+            width:250px; float :right;
+        }
+        ul {
+            overflow: hidden;
+        }
+        li {
+            float:left;
+        }
+        .header{
+            height: 100px;
+            position:relative;
+        }
+        .header h1 {
+            position:absolute;
+            left : 10px;
+            top : 30px;
+        }
+        .gnb{
+            position: absolute;
+            right : 0;
+            top : 0;
+        }
+        .lnb{
+            position: absolute;
+            right : 0;
+            bottom : 0;
+        }
+        .container div {
+            box-sizing : border-box;
+            border: 1px solid black
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                Lorem Ipsum Dolor Sit Amet</h1>
+            <div class="gnb">
+                <ul>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                </ul>
+            </div>
+            <div class="lnb">
+                <ul>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                    <li>blabla</li>
+                    <li>blablabla</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section">
+                <article>
+                    <h1>Lorem Ipsum Dolor Sit Amet</h1>
+                    <p>In mollit Lorem aute tempor dolore veniam nostrud ad mollit.</p>
+                    <p>Consectetur incididunt laboris amet non do sint.</p>
+                    <p>Occaecat pariatur laborum nisi et tempor excepteur reprehenderit cillum quis dolor cillum.</p>
+                    <p>In mollit Lorem aute tempor dolore veniam nostrud ad mollit.</p>
+                    <p>Consectetur incididunt laboris amet non do sint.</p>
+                    <p>Occaecat pariatur laborum nisi et tempor excepteur reprehenderit cillum quis dolor cillum.</p>
+                    <p>In mollit Lorem aute tempor dolore veniam nostrud ad mollit.</p>
+                    <p>Consectetur incididunt laboris amet non do sint.</p>
+                    <p>Occaecat pariatur laborum nisi et tempor excepteur reprehenderit cillum quis dolor cillum.</p>
+                    <p>In mollit Lorem aute tempor dolore veniam nostrud ad mollit.</p>
+                    <p>Consectetur incididunt laboris amet non do sint.</p>
+                    <p>Occaecat pariatur laborum nisi et tempor excepteur reprehenderit cillum quis dolor cillum.</p>
+                </article>
+            </div>
+                
+            <div class="aside">
+                <label for="tab-1">TAB1</label>
+                <label for="tab-2">TAB2</label>
+                <input type="radio" name="tab" id="tab-1" checked="checked">
+                <input type="radio" name="tab" id="tab-2">
+                <div class="tab-item">Irure cupidatat ullamco commodo qui culpa nostrud laboris id aliquip esse do dolore.Mollit duis aute culpa excepteur et mollit cillum laborum sunt ipsum nostrud ullamco nisi.Laborum nisi nostrud cillum excepteur minim exercitation fugiat sunt esse.</div>
+                <div class="tab-item">Minim mollit sint voluptate ut sit magna tempor exercitation est laborum nostrud ullamco labore.Sunt fugiat labore qui amet enim exercitation voluptate dolore officia duis.Et magna id minim pariatur irure ad cillum id culpa ipsum do anim.Consequat irure qui sunt dolore.</div>          
+            </div>
+        </div>
+            
+        <div class="footer">
+            <p>Excepteur irure officia in sit tempor magna ullamco nisi anim dolor duis reprehenderit.
+                Consequat ipsum ullamco voluptate est consectetur. Consectetur ex aute magna sit sint. Esse ea et elit eiusmod aute aliqua ut quis excepteur velit irure. Non qui sit qui ullamco officia. Eiusmod laboris sit labore officia laborum eiusmod occaecat duis ea amet.
+
+Occaecat consectetur eiusmod irure sunt eiusmod sunt consequat ut culpa. Labore occaecat id labore exercitation proident. Eu amet irure eu nostrud amet Lorem laborum. Reprehenderit in sint aliquip officia magna sit aliqua id consequat reprehenderit officia minim.
+
+Tempor commodo cupidatat est commodo deserunt ex ex labore aute eu cillum elit elit. Dolore laboris ipsum quis dolore minim ipsum consequat ipsum est magna excepteur dolore consequat ad. Eu officia et incididunt do non nisi esse officia cupidatat velit proident. Commodo minim exercitation consectetur eiusmod ex commodo velit enim anim voluptate irure ex.
+
+Deserunt proident consectetur et tempor veniam in quis sunt. Deserunt commodo aute aliqua sunt do culpa sunt qui esse. Quis officia sunt reprehenderit in ipsum tempor duis non veniam cillum laboris eu cillum irure. Officia in eu sit sit id consectetur aliquip nisi mollit velit et do. Velit aliquip occaecat excepteur magna. Adipisicing sunt deserunt dolor sunt sit ex reprehenderit officia proident esse incididunt et. Cupidatat exercitation laborum fugiat duis mollit.
+
+Est nostrud nulla consequat sint elit pariatur dolore in ut cillum. Enim anim nisi qui quis culpa incididunt duis pariatur id eiusmod anim excepteur fugiat. Et fugiat veniam reprehenderit voluptate aliqua reprehenderit eiusmod dolor. Ipsum elit ut officia velit sunt labore. Ea est labore reprehenderit aute.
+
+Do velit consequat commodo est pariatur sint est. Cupidatat tempor nostrud aute occaecat qui excepteur elit enim tempor ex. Eu aliqua nulla id laborum ullamco proident ea deserunt do cupidatat in magna. Eiusmod nulla occaecat minim labore dolor labore irure pariatur exercitation Lorem adipisicing do.
+            </p>
+        </div>
+    </div>
+       
+</body>
+</html>
