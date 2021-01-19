@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-size: 20;
+        line-height: 1;
+        background-color: #d2d2d2;
+    }
+    .container {
+        max-width: 1150px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+    header{
+        min-height: 80px;
+        padding: 10px 20px 0;
+    }
+    header a.logo{
+        float: left;
+    }
+    header a.logo img{
+        width: 50%;
+    }
+    header ul{
+        float: right;
+        list-style: none;
+    }
+    header ul li{
+        display: inline-block; /*가로배치*/
+    }
+    header ul li a{
+        text-decoration: none;
+        border: 1px solid #bcbcbc;
+        color: #3d3d3d;
+        padding: 10px;
+        margin: 0 5px;
+        margin-right: -10px;   
+    }
+    header ul li a:hover{
+        color: red;
+        border-bottom: 3px solid red;
+    }
+    .main-img{
+        height: 400px;
+        overflow: hidden;
+        background: url(http://css3.zerois.net/images/pic1.jpg);
+        /* background-position: top center no-repeat; */
+        background-size: cover;
+    }
+    .text-box {
+    position: relative; /*본인이 원래 있던 위치를 기준으로 하여 offset값 만큼 이동*/
+    float: right;
+    right: 50px;
+    top: 100px;
+    padding: 10px 25px;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+    .text-center{
+        text-align: center;
+    }
+    .middle, .middle-bottom {
+        height: 250px; /*display:flex를 할때 내용물 보다 큰 높이를 주어 배경으로 활용가능*/
+        display: flex;
+        flex-direction: column; /*세로배치*/
+        justify-content: center; /*flex-direction offest값(여기서는 column)에 따른 중앙정렬 == 세로중앙정렬*/
+    }
+    .middle h2, .middle-bottom h2{
+        font-size: 1.85rem;
+        font-weight: normal; /*h2는 bold가 기본이라 normal로 굵기를 줄임*/
+    }
+    .middle p{
+        font-size: 1rem;
+        margin: 0;
+        padding-bottom: 0.5rem;
+    }
+    .gray-back{
+        background-color: #f2f2f2;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        overflow: hidden;  /*여기서는2번*/
+        /*1. 부모에 고정된 height 속성이나 width 속성이 있을 경우 : 넌ㅁ쳐 흐르는 자식요소의 넘친 부분을 보이지 않게함
+        2. 고정된 width,height 속성이 없는 경우 : 넘쳐 흐르는 자식요소를 포함하도록 크기를 늘린다.*/
+    }
+    .row{
+        padding: 10px;
+    }
+    .middle-bottom{
+        height: 350px;
+    }
+    .icon-box{
+        width: 25%;
+        float: left;
+        text-align: center;
+    }
+    .icon-box i{
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #c9c9c9;
+        margin: auto;
+    }
+    footer {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+}
+    .footlogo {
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+
+    footer ul {
+        list-style: none;
+    }
+
+    footer ul li {
+        display: inline-block;
+        padding-left: 15px;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+        color: #999;
+    }
+
+    footer ul li a:hover {
+        color: orange;
+    }
+
+</style>
+<body>
+    <header class="container">
+        <a href="#" class="logo"><img src="http://css3.zerois.net/images/logo.png" alt="로고"></a>
+        <ul>
+            <li><a href="#">홈으로</a></li>
+            <li><a href="#">소개 페이지</a></li>
+            <li><a href="#">콘텐츠 페이지</a></li>
+        </ul>
+    </header>
+    <article class="container main-img">
+        <div class="text-box text-center">
+            <h2>
+                HTML5와 CSS3 그리고 자바스크립트
+            </h2>
+            <p>
+                이 책은 다른 책과 달리 무조건 예제부터 시작해서 간단한 싱글페이지 웹사이트를 하나 만드는 과정에서 HTML5와 CSS3 그리고 자바스크립트의 기능과 역할에 대해서 설명하도록 하겠습니다.
+            </p>
+        </div>      
+    </article>
+    <article class="container">
+        <div class=" middle text-center">
+            <h2>
+                HTML5와 CSS3 그리고 자바스크립트
+            </h2>
+            <p>
+                Visual Studio Code는 https://code.visualstudio.com/ 에서 다운로드가 가능합니다.
+            </p>
+            <p>
+                Visual Studio Code를 설치하시면, 이제 몇가지 확장 프로그램을 더 설치하시면 웹 개발을 빠르게 할 수 있습니다.
+            </p>
+        </div>
+    </article>
+    <article class="container gray-back">
+        <div class="row middle-bottom">
+            <h2 class="text-center">
+                프리프로세서(Preprocessor)란
+            </h2>
+            <p>
+                프리프로세서는 번역하자면 “선행처리기” 라고 하는데, 주로 프로그래밍 언어에서 사용됩니다.<br>
+                원래 CSS나 HTML 파일에는 변수 또는 함수 같은 코드가 없어서, 사이트의 규모가 커지고, 복잡도가 증가하게 되면, 일일이 모든 코드를 입력하는 것이 힘들 수 있습니다.<br>
+                이때 SASS와 같은 CSS 프리프로세서를 사용하면, 변수, 함수 및 값의 연산 등을 사용할 수 있게 되어, CSS의 개발이 보다 체계화되고, 빠르게 개발을 할 수 있습니다. 다만 원시 코드를 그대로 브라우저에서 사용할 순 없고, 컴파일 과정을 통해 CSS로 변환해야만 하기 때문에, 번거로울 수 있지만, 이 번거로움을 상쇄하는 강력한 기능이 있기 때문에, 최근 많은 개발자들이 사용하고 있습니다. 필자 또한 웹 개발용으로 SASS를 강력 추천합니다.
+            </p>
+        </div>
+        <div class="icon-box">
+            <i></i>
+            <p>아이콘 입니다.</p>
+        </div>
+        <div class="icon-box">
+            <i></i>
+            <p>아이콘 입니다.</p>
+        </div>
+        <div class="icon-box">
+            <i></i>
+            <p>아이콘 입니다.</p>
+        </div>
+        <div class="icon-box">
+            <i></i>
+            <p>아이콘 입니다.</p>
+        </div>
+    </article>
+    <footer class="container">
+        <div class="footlogo">@20217 ugpapa</div>
+        <ul>
+            <li><a href="#">이 홈피 주인장은?</a></li>
+            <li><a href="#">개인정보 보호</a></li>
+            <li><a href="#">사이트 약관</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
