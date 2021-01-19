@@ -6,19 +6,31 @@
     <title>Document</title>
     <style media="screen">
         table { 
-            border-collapse: collapse; /*테이블을 붙임*/
+            border-collapse: collapse; /*테이블의 공백을 없앰*/
             width:600px; /*테이블은 block 요소이기때문에 화면의 100%차지*/
-            table-layout: fixed; /*동일한 너비로 설정*/
-            }
+            table-layout: fixed; /*동일한 width값으로 설정*/
+            margin: 0 auto;
+        }
         td {
-            border : 1px solid;
-            width:50px;
+            border-bottom : 1px solid;
+            width:90px;
             height:50px;
             text-align: center;
-            }
-        th {border : 1px solid; width:50px; height:50px} /*text-align:center가 디폴트임*/
+        }
+        th {
+            border : 1px solid;
+            background-color: #0d47a1; 
+            width:90px; 
+            height:50px
+        } /*text-align:center가 디폴트임*/
+        tbody tr:nth-child(2n){
+            background-color: #bbdefb;
+        }
+        tbody tr:nth-child(2n+1){
+            background-color: #e3f2fd;
+        }
         body.aaaa{
-            font-size: 30px;
+            font-size: 20px;
         }
         table caption{
             caption-side: bottom;
@@ -29,6 +41,7 @@
     </style>
 </head>
 <body class="aaaa">
+    <p>Table example</p>
     <table>
         <caption>Specification values</caption>
         <thead>
@@ -45,7 +58,13 @@
                 <td>header</td><td>0.45</td><td>56.2</td><td>80,000</td><td>20</td>
             </tr>
             <tr>
-                <td>Medium</td>
+                <td>Medium</td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>Medium-2</td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>Footer</td><td></td><td></td><td></td><td></td>
             </tr>
         </tbody>
         <tfoot>
